@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17112f">
+  <meta name="description" content="Một lá thư gửi người thương, từ nơi xa đến tận trái tim.">
+  <title>Gửi em — người con gái anh yêu nhất 💌</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+    :root {
+      --pink: #ff91c3;
+      --pink-light: #ffd9ec;
+      --violet: #c7b2ff;
+      --text: #fff7fc;
+      --muted: #e0d4ef;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; min-height: 100svh; overflow-x: hidden; color: var(--text);
+      font-family: "Be Vietnam Pro", system-ui, sans-serif;
+      background:
+        radial-gradient(ellipse at 12% 16%, rgba(128, 77, 194, .36), transparent 36%),
+        radial-gradient(ellipse at 90% 30%, rgba(224, 76, 153, .2), transparent 33%),
+        radial-gradient(ellipse at 50% 100%, rgba(70, 60, 150, .32), transparent 45%),
+        linear-gradient(145deg, #100d27, #24143f 50%, #15102f);
+    }
+    body::before, body::after {
+      content: ""; position: fixed; z-index: 0; width: 330px; height: 330px;
+      border: 1px solid rgba(255, 191, 225, .08); border-radius: 50%; pointer-events: none;
+    }
+    body::before { top: -175px; right: -100px; box-shadow: 0 0 0 27px rgba(255,191,225,.025), 0 0 0 61px rgba(199,178,255,.02); }
+    body::after { bottom: -205px; left: -115px; box-shadow: 0 0 0 27px rgba(255,191,225,.025), 0 0 0 61px rgba(199,178,255,.02); }
+    .stars, .floating-layer, .burst-layer { position: fixed; inset: 0; overflow: hidden; pointer-events: none; }
+    .stars { z-index: 0; }
+    .star {
+      position: absolute; width: 3px; height: 3px; border-radius: 50%;
+      background: #fff; box-shadow: 0 0 11px 2px rgba(255, 190, 224, .65);
+      animation: twinkle var(--speed) ease-in-out var(--delay) infinite alternate;
+    }
+    .floating-layer { z-index: 1; }
+    .floating {
+      position: absolute; bottom: -55px; opacity: 0;
+      font-size: var(--size); animation: floatUp var(--speed) linear var(--delay) infinite;
+      filter: drop-shadow(0 0 10px rgba(255, 117, 184, .3));
+    }
+    .page {
+      min-height: 100svh; position: relative; z-index: 2;
+      display: grid; place-items: center; padding: 34px 15px;
+    }
+    .wrap { width: min(100%, 800px); }
+    .heading { text-align: center; margin: 0 auto 22px; animation: fadeUp .8s ease both; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px; padding: 8px 14px;
+      border: 1px solid rgba(255, 196, 225, .2); border-radius: 999px;
+      color: #ffd7e9; background: rgba(255,255,255,.055);
+      font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    }
+    .eyebrow span { color: var(--pink); animation: heartbeat 1.5s ease-in-out infinite; }
+    h1 {
+      margin: 21px 0 0; font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(35px, 7vw, 61px); font-weight: 600; line-height: 1.08; letter-spacing: -.03em;
+    }
+    h1 em {
+      display: block; margin-top: 7px; font-style: normal; color: transparent;
+      background: linear-gradient(100deg, #fff5fb, #ff9bc9 50%, #cbb7ff);
+      -webkit-background-clip: text; background-clip: text;
+    }
+    .subheading { margin: 14px auto 0; max-width: 520px; color: #cfc0e4; font-size: 14px; line-height: 1.8; }
+    .letter-card {
+      position: relative; padding: clamp(23px, 5vw, 48px);
+      border: 1px solid rgba(255, 222, 243, .2); border-radius: 28px;
+      background: linear-gradient(145deg, rgba(255,255,255,.105), rgba(255,255,255,.045));
+      box-shadow: 0 28px 100px rgba(0,0,0,.27), inset 0 1px 0 rgba(255,255,255,.12);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      animation: fadeUp .95s .12s ease both;
+    }
+    .letter-card::before {
+      content: ""; position: absolute; inset: 9px; border: 1px solid rgba(255,255,255,.055);
+      border-radius: 21px; pointer-events: none;
+    }
+    .letter-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 25px; }
+    .stamp {
+      display: grid; place-items: center; width: 49px; height: 49px; flex: 0 0 auto;
+      border: 1px solid rgba(255, 159, 204, .38); border-radius: 50%;
+      background: rgba(255, 145, 195, .09); color: #ffc9e2; font-size: 23px;
+      box-shadow: 0 0 28px rgba(255, 145, 195, .09);
+    }
+    .date { color: #aa9ac8; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; text-align: right; }
+    .salutation {
+      margin: 0 0 19px; color: #ffd5e9; font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(22px, 4vw, 29px); font-weight: 600; line-height: 1.35;
+    }
+    .letter-content { color: #eee4f5; font-size: 14px; line-height: 2; }
+    .letter-content p { margin: 0 0 15px; }
+    .letter-content strong { color: #ffc2de; font-weight: 700; }
+    .signature {
+      margin-top: 23px; padding-top: 19px; border-top: 1px solid rgba(255, 215, 235, .14);
+      text-align: right; color: #ffc2de; font-family: "Playfair Display", Georgia, serif;
+      font-size: 20px; line-height: 1.7;
+    }
+    .signature small {
+      display: block; margin-top: 4px; color: #b8a5d2; font-family: "Be Vietnam Pro", sans-serif;
+      font-size: 10px; letter-spacing: .13em; text-transform: uppercase;
+    }
+    .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 11px; margin-top: 25px; }
+    button {
+      min-height: 47px; padding: 12px 18px; border-radius: 999px; border: 0;
+      cursor: pointer; font: inherit; font-size: 13px; font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    button:hover { transform: translateY(-3px); }
+    button:active { transform: scale(.98); }
+    button:focus-visible { outline: 3px solid #ffe6f2; outline-offset: 4px; }
+    .primary { color: #38162f; background: linear-gradient(110deg, #ffe0ee, #ff91c3); box-shadow: 0 9px 24px rgba(255, 100, 171, .22); }
+    .secondary { color: #ffe2ef; border: 1px solid rgba(255,211,234,.25); background: rgba(255,255,255,.06); }
+    .secret-wrap { display: grid; grid-template-rows: 0fr; opacity: 0; margin-top: 0; transition: grid-template-rows .5s ease, opacity .35s ease, margin .35s ease; }
+    .secret-wrap > div { overflow: hidden; }
+    .secret-wrap.show { grid-template-rows: 1fr; opacity: 1; margin-top: 19px; }
+    .secret {
+      padding: 18px 19px; border: 1px dashed rgba(255,172,213,.38); border-radius: 17px;
+      background: rgba(255,145,195,.07); color: #ffe1ee; text-align: center;
+      font-family: "Playfair Display", Georgia, serif; font-size: 19px; line-height: 1.75;
+    }
+    .footer { margin-top: 23px; text-align: center; color: #a999c3; font-size: 10px; letter-spacing: .09em; line-height: 1.8; }
+    .footer span { color: #ff91c3; }
+    .burst {
+      position: fixed; z-index: 8; left: var(--x); top: var(--y); pointer-events: none;
+      font-size: var(--size); animation: burst 1.5s ease-out forwards;
+    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes twinkle { from { opacity: .2; transform: scale(.65); } to { opacity: 1; transform: scale(1.25); } }
+    @keyframes heartbeat { 0%,100% { transform: scale(1); } 15% { transform: scale(1.24); } 30% { transform: scale(1); } 45% { transform: scale(1.16); } }
+    @keyframes floatUp { 0% { opacity: 0; transform: translate3d(0,0,0) rotate(-12deg) scale(.8); } 12% { opacity: var(--opacity); } 80% { opacity: var(--opacity); } 100% { opacity: 0; transform: translate3d(var(--drift),-115vh,0) rotate(35deg) scale(1.2); } }
+    @keyframes burst { 0% { opacity: 0; transform: translate(-50%,-50%) scale(.3) rotate(0); } 15% { opacity: 1; } 100% { opacity: 0; transform: translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.4) rotate(var(--rotate)); } }
+    @media (max-width: 560px) {
+      .page { padding: 20px 12px; } .letter-card { border-radius: 22px; padding: 23px 20px; }
+      .letter-card::before { inset: 6px; border-radius: 16px; } .letter-content { font-size: 13px; line-height: 1.95; }
+      .letter-top { margin-bottom: 20px; } .actions { flex-direction: column; } button { width: 100%; }
+      .signature { font-size: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <div class="floating-layer" id="floatingLayer" aria-hidden="true"></div>
+  <div class="burst-layer" id="burstLayer" aria-hidden="true"></div>
+
+  <main class="page">
+    <div class="wrap">
+      <header class="heading">
+        <div class="eyebrow"><span>♥</span> A letter from the heart <span>♥</span></div>
+        <h1>Gửi em —<em>người con gái anh yêu nhất</em></h1>
+        <p class="subheading">Dù khoảng cách có xa đến đâu, mong những dòng chữ này vẫn có thể ôm em bằng tất cả yêu thương. 💌</p>
+      </header>
+
+      <article class="letter-card">
+        <div class="letter-top">
+          <div class="stamp" aria-hidden="true">💌</div>
+          <div class="date">Gửi từ nơi xa · Bằng cả trái tim</div>
+        </div>
+
+        <h2 class="salutation">Em biết không? ❤️</h2>
+
+        <div class="letter-content">
+          <p>Mỗi buổi sáng thức dậy, điều đầu tiên anh nghĩ đến là em. Mỗi khi ăn một món ngon, anh lại nghĩ: <strong>“Giá mà em cũng được nếm thử cùng anh”.</strong> Mỗi khi đi qua những con đường mới, anh lại ước: <strong>“Phải có em đi bên cạnh thì mới trọn vẹn biết bao”.</strong> Có những lúc mệt mỏi, chỉ cần nghĩ về nụ cười của em là anh lại có thêm cả một nguồn sức mạnh để cố gắng tiếp bước.</p>
+
+          <p>Chúng ta hiện tại xa nhau thật đấy, nhưng em đừng bao giờ nghĩ rằng khoảng cách sẽ làm mờ đi tình cảm của anh nhé. Ngược lại, càng xa em anh càng hiểu rõ: <strong>em chính là điều quý giá nhất anh có.</strong> Tất cả những gì anh cố gắng hôm nay — học hành, nỗ lực, chịu khó ở nơi xa lạ — đều vì một ngày không xa, anh sẽ trở về, nắm chặt tay em và nói: <strong>“Em ơi, anh đã về rồi, từ bây giờ không còn xa nhau nữa”.</strong></p>
+
+          <p>Em ở nhà hãy giữ gìn sức khỏe, ăn đủ bữa, ngủ đủ giấc và luôn vui vẻ cho anh nhé. Hãy tin vào chúng ta, tin vào tình yêu của mình. Chờ anh thêm một chút nữa thôi, tình yêu của em đang cố gắng mỗi ngày để sớm được về bên em.</p>
+        </div>
+
+        <div class="signature">
+          Yêu em thật nhiều, thật nhiều
+          <small>Mãi mãi ❤️🌏✨</small>
+        </div>
+
+        <div class="actions">
+          <button class="primary" id="heartButton" type="button">💖 Gửi thật nhiều trái tim</button>
+          <button class="secondary" id="secretButton" type="button">✨ Một lời nhắn nhỏ</button>
+        </div>
+
+        <div class="secret-wrap" id="secretWrap" aria-live="polite">
+          <div><div class="secret">Khoảng cách chỉ là những cây số giữa hai nơi, không phải thước đo của yêu thương. Mong mỗi ngày trôi qua sẽ đưa hai trái tim đến gần ngày đoàn tụ hơn. 💗🌏</div></div>
+        </div>
+      </article>
+
+      <footer class="footer">VIẾT BẰNG YÊU THƯƠNG <span>♥</span> GỬI ĐẾN NGƯỜI ĐANG ĐƯỢC NHỚ THƯƠNG</footer>
+    </div>
+  </main>
+
+  <script>
+    (() => {
+      const stars = document.getElementById("stars");
+      const floatingLayer = document.getElementById("floatingLayer");
+      const burstLayer = document.getElementById("burstLayer");
+      const heartButton = document.getElementById("heartButton");
+      const secretButton = document.getElementById("secretButton");
+      const secretWrap = document.getElementById("secretWrap");
+
+      for (let i = 0; i < 62; i++) {
+        const star = document.createElement("span");
+        star.className = "star";
+        star.style.left = (Math.random() * 100) + "%";
+        star.style.top = (Math.random() * 100) + "%";
+        star.style.setProperty("--speed", (1.8 + Math.random() * 4) + "s");
+        star.style.setProperty("--delay", (-Math.random() * 4) + "s");
+        stars.appendChild(star);
+      }
+
+      const icons = ["💗", "💖", "💕", "💘", "♡", "✨", "🌸"];
+      for (let i = 0; i < 23; i++) {
+        const item = document.createElement("span");
+        item.className = "floating";
+        item.textContent = icons[Math.floor(Math.random() * icons.length)];
+        item.style.left = (Math.random() * 100) + "%";
+        item.style.color = ["#ff9bc9", "#ffd9ec", "#cbbaff", "#ffffff"][Math.floor(Math.random() * 4)];
+        item.style.setProperty("--size", (13 + Math.random() * 18) + "px");
+        item.style.setProperty("--speed", (9 + Math.random() * 12) + "s");
+        item.style.setProperty("--delay", (-Math.random() * 20) + "s");
+        item.style.setProperty("--drift", (Math.round(Math.random() * 150 - 75)) + "px");
+        item.style.setProperty("--opacity", (0.25 + Math.random() * 0.4).toFixed(2));
+        floatingLayer.appendChild(item);
+      }
+
+      heartButton.addEventListener("click", () => {
+        const rect = heartButton.getBoundingClientRect();
+        burstHearts(rect.left + rect.width / 2, rect.top + rect.height / 2, 32);
+        heartButton.textContent = "💞 Gửi thêm một lần nữa";
+      });
+
+      secretButton.addEventListener("click", () => {
+        const isOpen = secretWrap.classList.toggle("show");
+        secretButton.textContent = isOpen ? "✨ Gấp lời nhắn lại" : "✨ Một lời nhắn nhỏ";
+        if (isOpen) {
+          const rect = secretButton.getBoundingClientRect();
+          burstHearts(rect.left + rect.width / 2, rect.top + rect.height / 2, 17);
+        }
+      });
+
+      document.addEventListener("pointerdown", (event) => {
+        if (event.target.closest("button")) return;
+        burstHearts(event.clientX, event.clientY, 5);
+      });
+
+      function burstHearts(x, y, amount) {
+        for (let i = 0; i < amount; i++) {
+          const item = document.createElement("span");
+          item.className = "burst";
+          item.textContent = icons[Math.floor(Math.random() * icons.length)];
+          item.style.setProperty("--x", x + "px");
+          item.style.setProperty("--y", y + "px");
+          item.style.setProperty("--dx", (Math.round(Math.random() * 270 - 135)) + "px");
+          item.style.setProperty("--dy", (Math.round(-50 - Math.random() * 220)) + "px");
+          item.style.setProperty("--size", (14 + Math.random() * 20) + "px");
+          item.style.setProperty("--rotate", (Math.round(Math.random() * 80 - 40)) + "deg");
+          burstLayer.appendChild(item);
+          item.addEventListener("animationend", () => item.remove(), { once: true });
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
