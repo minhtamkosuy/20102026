@@ -3,139 +3,410 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff0f5">
-  <meta name="description" content="Lời chúc dịu dàng nhân ngày Phụ nữ Việt Nam 20/10.">
-  <title>Chúc mừng 20/10 🌷</title>
+  <meta name="theme-color" content="#21153f">
+  <meta name="description" content="Lời chúc 20/10 gửi đến những cô gái đáng yêu của lớp 12A2.">
+  <title>12A2 💗 Chúc mừng ngày 20/10</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
-    :root{--pink:#e85d8e;--rose:#c43f72;--deep:#713752;--glass:rgba(255,255,255,.74);--shadow:0 24px 80px rgba(153,71,104,.17)}
-    *{box-sizing:border-box}
-    body{margin:0;min-height:100svh;overflow-x:hidden;color:var(--deep);font-family:"DM Sans",system-ui,sans-serif;background:radial-gradient(ellipse at 12% 15%,rgba(255,191,213,.62),transparent 38%),radial-gradient(ellipse at 88% 80%,rgba(255,220,174,.52),transparent 34%),linear-gradient(135deg,#fff8f4,#ffedf4 48%,#fff8f2)}
-    body:before,body:after{content:"";position:fixed;z-index:-1;width:330px;height:330px;border:1px solid rgba(232,93,142,.16);border-radius:50%;pointer-events:none}
-    body:before{top:-170px;right:-90px;box-shadow:0 0 0 25px rgba(232,93,142,.035),0 0 0 50px rgba(232,93,142,.025)}
-    body:after{bottom:-210px;left:-110px;box-shadow:0 0 0 25px rgba(232,93,142,.035),0 0 0 50px rgba(232,93,142,.025)}
-    .page{display:grid;place-items:center;min-height:100svh;padding:38px 18px;isolation:isolate}
-    .sparkles,.petals{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
-    .sparkle{position:absolute;width:5px;height:5px;background:#fff;border-radius:50%;box-shadow:0 0 12px 3px rgba(232,93,142,.28);animation:twinkle var(--duration,3s) ease-in-out infinite alternate}
-    .petal{position:absolute;top:-40px;font-size:var(--size,19px);opacity:0;animation:fall var(--duration,10s) linear var(--delay,0s) infinite;filter:drop-shadow(0 4px 5px rgba(135,65,90,.1))}
-    .card{width:min(100%,760px);position:relative;padding:clamp(28px,6vw,62px) clamp(22px,7vw,72px) 34px;text-align:center;border:1px solid rgba(255,255,255,.9);border-radius:34px;background:var(--glass);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:var(--shadow),inset 0 1px 0 #fff;animation:rise .9s cubic-bezier(.2,.75,.2,1) both}
-    .topline{display:inline-flex;align-items:center;gap:9px;padding:8px 15px;margin-bottom:23px;border:1px solid rgba(232,93,142,.18);border-radius:999px;color:var(--rose);background:rgba(255,255,255,.68);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
-    .dot{width:7px;height:7px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 4px rgba(232,93,142,.12)}
-    .flower{display:inline-block;font-size:clamp(46px,8vw,70px);line-height:1;margin-bottom:16px;transform-origin:50% 85%;animation:sway 3.4s ease-in-out infinite;filter:drop-shadow(0 8px 12px rgba(196,63,114,.15))}
-    h1,h2{font-family:"Playfair Display",Georgia,serif;font-weight:600;letter-spacing:-.035em}
-    h1{margin:0;font-size:clamp(35px,7.5vw,70px);line-height:1;color:#a93468}
-    h1 .date{display:block;margin-top:9px;color:var(--pink);font-size:clamp(60px,12vw,100px);text-shadow:0 8px 30px rgba(232,93,142,.17)}
-    .subtitle{margin:23px auto 0;max-width:490px;font-size:clamp(15px,2.8vw,18px);line-height:1.8;color:#83556a}
-    .subtitle strong{color:#b53c70}
-    .divider{display:flex;justify-content:center;align-items:center;gap:12px;margin:25px 0;color:#de7ca0;font-size:14px}
-    .divider:before,.divider:after{content:"";display:block;width:min(18vw,90px);height:1px;background:linear-gradient(90deg,transparent,rgba(222,124,160,.8))}
-    .divider:after{transform:rotate(180deg)}
-    .wish{max-width:520px;margin:0 auto;font-size:15px;line-height:1.95;color:#765063}
-    .wish p{margin:0 0 11px}.wish .signature{margin-top:15px;color:#bd4d7b;font-weight:700}
-    .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:29px}
-    button{appearance:none;border:0;cursor:pointer;min-height:48px;padding:13px 20px;border-radius:999px;font:inherit;font-size:14px;font-weight:700;transition:transform .2s ease,box-shadow .2s ease}
-    button:hover{transform:translateY(-3px)}button:active{transform:scale(.98)}button:focus-visible{outline:3px solid #b53c70;outline-offset:4px}
-    .primary{color:#fff;background:linear-gradient(135deg,#ee75a0,#c64178);box-shadow:0 9px 22px rgba(198,65,120,.25)}
-    .secondary{color:#b53c70;border:1px solid rgba(198,65,120,.2);background:rgba(255,255,255,.8)}
-    .secret{display:grid;grid-template-rows:0fr;opacity:0;margin-top:0;transition:grid-template-rows .55s ease,opacity .4s ease,margin .4s ease}
-    .secret>div{overflow:hidden}.secret.show{grid-template-rows:1fr;opacity:1;margin-top:22px}
-    .secret-note{padding:18px 20px;border:1px dashed rgba(198,65,120,.34);border-radius:18px;color:#90405f;background:rgba(255,240,246,.78);font-family:"Playfair Display",Georgia,serif;font-size:clamp(17px,3vw,21px);line-height:1.65}
-    .footer{margin-top:31px;color:#b37d94;font-size:12px;letter-spacing:.04em}.footer span{color:#d85388}
-    .burst-heart{position:fixed;z-index:5;left:var(--x);top:var(--y);pointer-events:none;font-size:var(--size,22px);animation:burst 1.35s ease-out forwards}
-    @keyframes rise{from{opacity:0;transform:translateY(24px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
-    @keyframes sway{0%,100%{transform:rotate(-7deg) translateY(0)}50%{transform:rotate(7deg) translateY(-5px)}}
-    @keyframes twinkle{from{opacity:.25;transform:scale(.7)}to{opacity:.95;transform:scale(1.25)}}
-    @keyframes fall{0%{opacity:0;transform:translate3d(0,-5vh,0) rotate(0)}10%{opacity:.8}85%{opacity:.65}100%{opacity:0;transform:translate3d(var(--drift,70px),110vh,0) rotate(550deg)}}
-    @keyframes burst{0%{opacity:0;transform:translate(-50%,-50%) scale(.4)}15%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.35) rotate(35deg)}}
-    @media(max-width:520px){.page{padding:20px 13px}.card{border-radius:25px}.topline{font-size:10px;letter-spacing:.1em}.actions{flex-direction:column;align-items:stretch}button{width:100%}.footer{line-height:1.7}}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+
+    :root {
+      --pink: #ff8fbd;
+      --pink-light: #ffd1e4;
+      --violet: #c6a7ff;
+      --ink: #fff7fc;
+      --muted: #e0d3f0;
+      --panel: rgba(45, 31, 76, .72);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100svh;
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+      background:
+        radial-gradient(ellipse at 15% 20%, rgba(235, 100, 179, .24), transparent 32%),
+        radial-gradient(ellipse at 85% 16%, rgba(142, 103, 245, .23), transparent 31%),
+        radial-gradient(ellipse at 60% 95%, rgba(241, 91, 159, .18), transparent 38%),
+        linear-gradient(145deg, #130e2a 0%, #21153f 48%, #321744 100%);
+    }
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      z-index: -2;
+      width: 48vw;
+      height: 48vw;
+      max-width: 620px;
+      max-height: 620px;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: .22;
+      pointer-events: none;
+    }
+    body::before { background: #bd4f9c; top: -26vw; left: -14vw; }
+    body::after { background: #7056d8; bottom: -30vw; right: -15vw; }
+    .stars, .floating-hearts, .burst-layer {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .stars { z-index: -1; }
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 10px 2px rgba(255, 206, 235, .48);
+      animation: twinkle var(--speed) ease-in-out var(--delay) infinite alternate;
+    }
+    .floating-hearts { z-index: 0; }
+    .float-heart {
+      position: absolute;
+      bottom: -60px;
+      opacity: 0;
+      font-size: var(--size);
+      filter: drop-shadow(0 0 12px rgba(255, 126, 188, .3));
+      animation: floatUp var(--speed) linear var(--delay) infinite;
+    }
+    .page {
+      display: grid;
+      place-items: center;
+      min-height: 100svh;
+      padding: 34px 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .card {
+      width: min(100%, 780px);
+      padding: clamp(28px, 6vw, 60px) clamp(22px, 7vw, 70px) 30px;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+      border: 1px solid rgba(255, 223, 244, .23);
+      border-radius: 32px;
+      background: linear-gradient(145deg, rgba(56, 40, 88, .83), rgba(37, 26, 65, .74));
+      box-shadow: 0 30px 100px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .13);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      animation: cardIn 1s cubic-bezier(.18,.8,.22,1) both;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 15% auto;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 192, 225, .8), transparent);
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 15px;
+      color: #ffd4e8;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 210, 235, .2);
+      border-radius: 999px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .eyebrow .heart-dot { color: #ff8fbd; animation: heartbeat 1.5s infinite; }
+    .bouquet {
+      margin: 22px 0 12px;
+      font-size: clamp(48px, 8vw, 72px);
+      line-height: 1;
+      filter: drop-shadow(0 8px 25px rgba(255, 123, 188, .25));
+      animation: bouquetFloat 3.2s ease-in-out infinite;
+    }
+    h1 {
+      margin: 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(34px, 7.4vw, 67px);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      text-wrap: balance;
+    }
+    h1 .class-name {
+      display: block;
+      margin-top: 5px;
+      font-size: clamp(58px, 12vw, 102px);
+      line-height: 1.04;
+      background: linear-gradient(100deg, #fff2f9 4%, #ff9fc9 48%, #cdb7ff 95%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 7px 25px rgba(255, 117, 184, .13));
+    }
+    .subtitle {
+      max-width: 520px;
+      margin: 22px auto 0;
+      color: #e8dcef;
+      font-size: clamp(14px, 2.6vw, 17px);
+      line-height: 1.9;
+    }
+    .subtitle strong { color: #ffb6d5; font-weight: 700; }
+    .ornament {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 13px;
+      margin: 26px auto 23px;
+      color: #ffacd0;
+      font-size: 15px;
+    }
+    .ornament::before, .ornament::after {
+      content: "";
+      display: block;
+      width: min(18vw, 95px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 172, 208, .72));
+    }
+    .ornament::after { transform: rotate(180deg); }
+    .message {
+      max-width: 550px;
+      margin: 0 auto;
+      color: #eee3f5;
+      font-size: 14px;
+      line-height: 2;
+    }
+    .message p { margin: 0 0 12px; }
+    .message .wish-end {
+      margin-top: 17px;
+      color: #ffb7d7;
+      font-weight: 700;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 29px;
+    }
+    button {
+      appearance: none;
+      min-height: 48px;
+      padding: 13px 19px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    button:hover { transform: translateY(-3px); }
+    button:active { transform: translateY(0) scale(.98); }
+    button:focus-visible { outline: 3px solid #ffd1e4; outline-offset: 4px; }
+    .btn-main {
+      color: #391631;
+      background: linear-gradient(110deg, #ffd1e4, #ff8fbd);
+      box-shadow: 0 10px 28px rgba(255, 100, 174, .2);
+    }
+    .btn-secondary {
+      color: #ffe8f4;
+      border-color: rgba(255, 211, 238, .25);
+      background: rgba(255, 255, 255, .07);
+    }
+    .count { display: inline-block; min-width: 1ch; margin-left: 3px; }
+    .secret {
+      display: grid;
+      grid-template-rows: 0fr;
+      margin-top: 0;
+      opacity: 0;
+      transition: grid-template-rows .55s ease, opacity .4s ease, margin .4s ease;
+    }
+    .secret > div { overflow: hidden; }
+    .secret.show { grid-template-rows: 1fr; margin-top: 22px; opacity: 1; }
+    .secret-note {
+      padding: 18px 20px;
+      border: 1px dashed rgba(255, 182, 218, .45);
+      border-radius: 20px;
+      background: rgba(255, 180, 216, .07);
+      color: #ffe9f5;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(16px, 3vw, 21px);
+      line-height: 1.75;
+    }
+    .footer {
+      margin-top: 30px;
+      color: #bda8d5;
+      font-size: 11px;
+      letter-spacing: .06em;
+    }
+    .footer span { color: #ff8fbd; }
+    .burst-heart {
+      position: fixed;
+      z-index: 10;
+      left: var(--x);
+      top: var(--y);
+      pointer-events: none;
+      font-size: var(--size);
+      filter: drop-shadow(0 0 8px rgba(255, 129, 191, .28));
+      animation: burst 1.4s cubic-bezier(.12,.68,.24,1) forwards;
+    }
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(28px) scale(.975); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes twinkle {
+      from { opacity: .18; transform: scale(.65); }
+      to { opacity: .95; transform: scale(1.35); }
+    }
+    @keyframes floatUp {
+      0% { opacity: 0; transform: translate3d(0, 0, 0) rotate(-12deg) scale(.8); }
+      12% { opacity: var(--opacity); }
+      78% { opacity: var(--opacity); }
+      100% { opacity: 0; transform: translate3d(var(--drift), -115vh, 0) rotate(25deg) scale(1.15); }
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      12% { transform: scale(1.25); }
+      24% { transform: scale(1); }
+      36% { transform: scale(1.18); }
+      48% { transform: scale(1); }
+    }
+    @keyframes bouquetFloat {
+      0%, 100% { transform: translateY(0) rotate(-3deg); }
+      50% { transform: translateY(-7px) rotate(3deg); }
+    }
+    @keyframes burst {
+      0% { opacity: 0; transform: translate(-50%, -50%) scale(.35) rotate(0); }
+      14% { opacity: 1; }
+      100% { opacity: 0; transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1.4) rotate(var(--rotate)); }
+    }
+    @media (max-width: 520px) {
+      .page { padding: 17px 12px; }
+      .card { border-radius: 25px; }
+      .eyebrow { font-size: 9px; letter-spacing: .1em; }
+      .actions { flex-direction: column; align-items: stretch; }
+      button { width: 100%; }
+      .message { font-size: 13px; }
+      .footer { line-height: 1.8; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
-  <div class="petals" id="petals" aria-hidden="true"></div>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+  <div class="burst-layer" id="burstLayer" aria-hidden="true"></div>
+
   <main class="page">
-    <section class="card" aria-labelledby="main-title">
-      <div class="topline"><span class="dot"></span> 20 tháng 10 · Ngày đặc biệt</div>
-      <div class="flower" aria-hidden="true">🌷</div>
-      <h1 id="main-title">Happy Women's Day<span class="date">20/10</span></h1>
-      <p class="subtitle">Gửi đến <strong>những cô gái tuyệt vời</strong> — chúc các bạn luôn rạng rỡ như hoa, dịu dàng với thế giới và tự tin tỏa sáng theo cách riêng của mình.</p>
-      <div class="divider" aria-hidden="true">✦ ❀ ✦</div>
-      <div class="wish">
-        <p>Chúc các bạn nữ một ngày 20/10 thật nhiều niềm vui, nhận được thật nhiều yêu thương và những điều bất ngờ dễ thương.</p>
-        <p>Mong mọi ước mơ đều có cơ hội nở hoa, mọi nỗ lực đều được trân trọng, và mỗi ngày đều có ít nhất một lý do để mỉm cười. 💗</p>
-        <p class="signature">Chúc mừng Ngày Phụ nữ Việt Nam! 🌸</p>
+    <section class="card" aria-labelledby="title">
+      <div class="eyebrow"><span class="heart-dot">♥</span> A little love for 12A2 <span class="heart-dot">♥</span></div>
+      <div class="bouquet" aria-hidden="true">💐</div>
+      <h1 id="title">Gửi những cô gái<span class="class-name">12A2</span></h1>
+      <p class="subtitle">
+        Hôm nay là ngày đặc biệt để nói với <strong>những bông hoa rực rỡ của lớp mình</strong>
+        rằng: các bạn xứng đáng với thật nhiều niềm vui, yêu thương và những điều tuyệt vời nhất! 💗
+      </p>
+
+      <div class="ornament" aria-hidden="true">✧ ♡ ✧</div>
+
+      <div class="message">
+        <p>Nhân ngày Phụ nữ Việt Nam 20/10, chúc các bạn nữ <strong>12A2</strong> luôn xinh tươi, tự tin, học tốt và ngày nào cũng có thật nhiều lý do để cười.</p>
+        <p>Chúc cho những năm tháng học trò của chúng ta sẽ đầy ắp kỷ niệm đẹp; bài kiểm tra thì thuận lợi, ước mơ luôn ở phía trước và bên cạnh lúc nào cũng có những người bạn chân thành.</p>
+        <p>Mong mỗi bạn đều được trân trọng vì chính con người mình, luôn can đảm theo đuổi điều mình thích và tỏa sáng theo cách riêng. 🌷</p>
+        <p class="wish-end">Chúc các cô gái 12A2 một ngày 20/10 ngọt ngào hết nấc! 💖</p>
       </div>
+
       <div class="actions">
-        <button class="primary" id="wishButton" type="button">💌 Nhận lời chúc bí mật</button>
-        <button class="secondary" id="heartButton" type="button">💖 Gửi một trái tim <span id="heartCount">0</span></button>
+        <button class="btn-main" id="wishButton" type="button">💌 Mở lời chúc bí mật</button>
+        <button class="btn-secondary" id="heartButton" type="button">💗 Gửi tim cho 12A2 <span class="count" id="heartCount">0</span></button>
       </div>
-      <div class="secret" id="secret" aria-live="polite"><div><div class="secret-note">“Mong bạn luôn được yêu thương đúng cách, được làm điều mình thích, được là chính mình — và nhớ rằng bạn tuyệt vời hơn bạn nghĩ rất nhiều.” 💐</div></div></div>
-      <div class="footer">Made with <span>♥</span> and a little pink magic · 20/10</div>
+
+      <div class="secret" id="secret" aria-live="polite">
+        <div><div class="secret-note">Một chiếc lời nhắn nhỏ dành cho bạn: hãy luôn tự tin, tử tế với bản thân và đừng quên rằng sự hiện diện của bạn khiến tập thể 12A2 đặc biệt hơn. Chúc bạn được yêu thương thật nhiều — hôm nay và cả những ngày sau nữa! 💕</div></div>
+      </div>
+
+      <div class="footer">MADE WITH <span>♥</span> FOR THE AMAZING GIRLS OF 12A2 · 20/10</div>
     </section>
   </main>
+
   <script>
     (() => {
-      const sparkles = document.getElementById("sparkles");
-      const petals = document.getElementById("petals");
-      const wishButton = document.getElementById("wishButton");
-      const heartButton = document.getElementById("heartButton");
-      const secret = document.getElementById("secret");
-      const heartCount = document.getElementById("heartCount");
+      const stars = document.getElementById('stars');
+      const floatingHearts = document.getElementById('floatingHearts');
+      const wishButton = document.getElementById('wishButton');
+      const heartButton = document.getElementById('heartButton');
+      const heartCount = document.getElementById('heartCount');
+      const secret = document.getElementById('secret');
       let hearts = 0;
 
-      for (let i = 0; i < 34; i++) {
-        const star = document.createElement("span");
-        star.className = "sparkle";
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.setProperty("--duration", `${2 + Math.random() * 4}s`);
-        star.style.animationDelay = `${Math.random() * 4}s`;
-        sparkles.appendChild(star);
+      // Rải sao nhỏ trên nền đêm.
+      for (let i = 0; i < 54; i++) {
+        const star = document.createElement('span');
+        star.className = 'star';
+        star.style.left = (Math.random() * 100) + '%';
+        star.style.top = (Math.random() * 100) + '%';
+        star.style.setProperty('--speed', (2 + Math.random() * 4) + 's');
+        star.style.setProperty('--delay', (Math.random() * -5) + 's');
+        stars.appendChild(star);
       }
 
-      const petalIcons = ["🌸", "🌷", "💮", "✿", "💕"];
-      for (let i = 0; i < 17; i++) {
-        const petal = document.createElement("span");
-        petal.className = "petal";
-        petal.textContent = petalIcons[Math.floor(Math.random() * petalIcons.length)];
-        petal.style.left = `${Math.random() * 100}%`;
-        petal.style.setProperty("--size", `${13 + Math.random() * 14}px`);
-        petal.style.setProperty("--duration", `${8 + Math.random() * 9}s`);
-        petal.style.setProperty("--delay", `${-Math.random() * 16}s`);
-        petal.style.setProperty("--drift", `${Math.round(Math.random() * 180 - 90)}px`);
-        petals.appendChild(petal);
+      // Tim và emoji hoa bay lên liên tục.
+      const heartIcons = ['💗', '💖', '💕', '💘', '♡', '🌸'];
+      for (let i = 0; i < 19; i++) {
+        const heart = document.createElement('span');
+        heart.className = 'float-heart';
+        heart.textContent = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+        heart.style.left = (Math.random() * 100) + '%';
+        heart.style.setProperty('--size', (14 + Math.random() * 19) + 'px');
+        heart.style.setProperty('--speed', (9 + Math.random() * 12) + 's');
+        heart.style.setProperty('--delay', (-Math.random() * 18) + 's');
+        heart.style.setProperty('--drift', (Math.round(Math.random() * 130 - 65)) + 'px');
+        heart.style.setProperty('--opacity', (0.24 + Math.random() * 0.4).toFixed(2));
+        floatingHearts.appendChild(heart);
       }
 
-      wishButton.addEventListener("click", () => {
-        const isOpen = secret.classList.toggle("show");
-        wishButton.textContent = isOpen ? "💌 Gấp lời chúc lại" : "💌 Nhận lời chúc bí mật";
-        if (isOpen) {
-          secret.scrollIntoView({ behavior: "smooth", block: "nearest" });
-          makeHeartBurst(window.innerWidth / 2, window.innerHeight * .72, 9);
+      wishButton.addEventListener('click', () => {
+        const open = secret.classList.toggle('show');
+        wishButton.textContent = open ? '💌 Đóng lời chúc' : '💌 Mở lời chúc bí mật';
+        if (open) {
+          const r = wishButton.getBoundingClientRect();
+          makeBurst(r.left + r.width / 2, r.top + r.height / 2, 18);
         }
       });
 
-      heartButton.addEventListener("click", (event) => {
+      heartButton.addEventListener('click', (event) => {
         hearts += 1;
-        heartCount.textContent = hearts;
-        const rect = event.currentTarget.getBoundingClientRect();
-        makeHeartBurst(rect.left + rect.width / 2, rect.top + rect.height / 2, 12);
+        heartCount.textContent = String(hearts);
+        const r = event.currentTarget.getBoundingClientRect();
+        makeBurst(r.left + r.width / 2, r.top + r.height / 2, 24);
       });
 
-      function makeHeartBurst(x, y, amount) {
-        const icons = ["💗", "💖", "💕", "💘", "🌸"];
+      // Nhấn/chạm vào nền cũng tạo một cụm tim nhỏ.
+      document.addEventListener('pointerdown', (event) => {
+        if (event.target.closest('button')) return;
+        if (event.clientY < window.innerHeight - 15) makeBurst(event.clientX, event.clientY, 5);
+      });
+
+      function makeBurst(x, y, amount) {
+        const icons = ['💗', '💖', '💕', '💘', '✨', '🌸'];
         for (let i = 0; i < amount; i++) {
-          const heart = document.createElement("span");
-          heart.className = "burst-heart";
-          heart.textContent = icons[Math.floor(Math.random() * icons.length)];
-          heart.style.setProperty("--x", `${x}px`);
-          heart.style.setProperty("--y", `${y}px`);
-          heart.style.setProperty("--dx", `${Math.round(Math.random() * 220 - 110)}px`);
-          heart.style.setProperty("--dy", `${Math.round(-60 - Math.random() * 160)}px`);
-          heart.style.setProperty("--size", `${16 + Math.random() * 18}px`);
-          document.body.appendChild(heart);
-          heart.addEventListener("animationend", () => heart.remove(), { once: true });
+          const el = document.createElement('span');
+          el.className = 'burst-heart';
+          el.textContent = icons[Math.floor(Math.random() * icons.length)];
+          el.style.setProperty('--x', x + 'px');
+          el.style.setProperty('--y', y + 'px');
+          el.style.setProperty('--dx', Math.round(Math.random() * 240 - 120) + 'px');
+          el.style.setProperty('--dy', Math.round(-45 - Math.random() * 180) + 'px');
+          el.style.setProperty('--size', (14 + Math.random() * 18) + 'px');
+          el.style.setProperty('--rotate', Math.round(Math.random() * 90 - 45) + 'deg');
+          document.body.appendChild(el);
+          el.addEventListener('animationend', () => el.remove(), { once: true });
         }
       }
     })();
