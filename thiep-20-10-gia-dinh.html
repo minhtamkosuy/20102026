@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff0f4">
+<meta name="description" content="Thiệp 20/10 gửi yêu thương, lời chúc và động lực đến những người phụ nữ tuyệt vời trong gia đình.">
+<title>20/10 — Gửi yêu thương đến gia đình mình 💗</title>
+<style>
+:root{--rose:#d94f7d;--deep:#873d65;--ink:#62344f;--glass:rgba(255,255,255,.72)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,sans-serif;background:radial-gradient(ellipse at 12% 8%,#ffffffeb,transparent 32%),radial-gradient(ellipse at 90% 22%,#ffd5e2e6,transparent 34%),linear-gradient(140deg,#fff6f8,#ffe5ed 45%,#fff5e9)}
+body:before,body:after{content:"";position:fixed;z-index:-1;width:330px;height:330px;border-radius:50%;filter:blur(50px);opacity:.5;pointer-events:none}
+body:before{left:-130px;bottom:7vh;background:#f9a7c4}body:after{right:-135px;top:34vh;background:#f8d2a2}
+.topbar{width:min(1100px,calc(100% - 36px));margin:18px auto 0;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-size:.92rem;font-weight:800;letter-spacing:.08em;color:#9a5574}.pill{border:1px solid #c2668b38;background:#ffffff8f;padding:9px 14px;border-radius:999px;font-size:.82rem;color:#9a5574;backdrop-filter:blur(12px)}
+.music-toggle{position:fixed;z-index:20;right:18px;bottom:18px;border:0;border-radius:999px;color:white;background:linear-gradient(135deg,#df6e96,#a84f7a);padding:13px 17px;font-weight:750;box-shadow:0 10px 28px #a0416f47;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.music-toggle:hover{transform:translateY(-3px);box-shadow:0 14px 30px #a0416f59}button{font:inherit}
+.hero{width:min(960px,calc(100% - 32px));margin:48px auto 28px;text-align:center;position:relative}
+.eyebrow{color:#bd6388;letter-spacing:.23em;font-size:.78rem;text-transform:uppercase;font-weight:800}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.3rem,7vw,5.1rem);line-height:1.04;color:#853f65;margin:16px auto 18px;max-width:900px;font-weight:700;letter-spacing:-.035em;text-wrap:balance}
+h1 em{color:#d45585;font-weight:500}.hero-copy{font-size:clamp(1rem,2vw,1.18rem);color:#8f6279;max-width:620px;margin:0 auto;line-height:1.8}
+.date-seal{display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding:11px 18px;color:#a64f77;border:1px solid #c46f934f;background:#ffffff9e;border-radius:999px;box-shadow:0 7px 25px #b55f8414;font-weight:700;font-size:.92rem}
+.main-wrap{width:min(900px,calc(100% - 32px));margin:0 auto}
+.letter-card{position:relative;overflow:hidden;padding:clamp(24px,5vw,54px);border-radius:30px;background:var(--glass);border:1px solid #ffffffe0;box-shadow:0 25px 70px #8e44651f,inset 0 1px 0 #fffffff2;backdrop-filter:blur(18px)}
+.letter-card:before{content:"✿";position:absolute;top:-24px;right:23px;color:#f4c2d2;font-size:8rem;transform:rotate(18deg);opacity:.38}
+.letter-card:after{content:"♡";position:absolute;bottom:-45px;left:20px;color:#e8a4bd;font-size:9rem;opacity:.18}
+.mini-label{text-transform:uppercase;letter-spacing:.18em;font-size:.75rem;font-weight:850;color:#bf628a}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.75rem,4vw,2.5rem);color:#8a4568;line-height:1.18;margin:12px 0 20px}
+.letter-text{max-width:720px;font-size:1.04rem;line-height:1.95;color:#704b61;position:relative;z-index:1}.letter-text p{margin:0 0 15px}.letter-text strong{color:#bd4f7c}
+.signature{font-family:Georgia,serif;font-size:1.35rem;font-style:italic;color:#b34e7b;margin-top:24px}.flower-row{letter-spacing:.3em;font-size:1.3rem;margin-top:23px}
+.section-title{text-align:center;margin:62px 0 24px}.section-title h2{margin-bottom:8px}.section-title p{color:#9a6b83;margin:0;line-height:1.7}
+.wish-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.wish-card{border-radius:22px;padding:25px 21px;background:#ffffffb3;border:1px solid #ffffffe8;box-shadow:0 12px 35px #9c4d6f14;transition:transform .25s,box-shadow .25s}
+.wish-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px #9c4d6f21}
+.wish-icon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:#ffebf1;font-size:1.5rem}
+.wish-card h3{color:#995171;margin:17px 0 9px;font-family:Georgia,serif;font-size:1.3rem}.wish-card p{color:#87677a;line-height:1.75;margin:0;font-size:.94rem}
+.cheer{margin:58px 0 0;border-radius:30px;padding:clamp(28px,5vw,48px);text-align:center;color:white;background:linear-gradient(135deg,#d96b93,#9b527b 80%);box-shadow:0 22px 55px #9b446f3d;position:relative;overflow:hidden}
+.cheer:before,.cheer:after{position:absolute;font-size:8rem;opacity:.12;pointer-events:none}.cheer:before{content:"♡";left:-3px;top:-33px;transform:rotate(-20deg)}.cheer:after{content:"✿";right:-13px;bottom:-40px}
+.cheer h2{color:#fff8fb;margin-top:10px}.cheer p{position:relative;z-index:1;color:#ffffffe8;font-size:1.03rem;line-height:1.85;max-width:680px;margin:0 auto 23px}
+.quote{min-height:60px;display:grid;place-items:center;max-width:700px;margin:0 auto 22px;font-family:Georgia,serif;font-size:clamp(1.2rem,3vw,1.7rem);line-height:1.45}
+.action-row{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;position:relative;z-index:2}
+.btn{cursor:pointer;border-radius:999px;padding:13px 20px;border:1px solid #ffffffa6;font-weight:800;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-light{background:#fff8fb;color:#a34772}.btn-ghost{background:#ffffff21;color:white}
+.closing{text-align:center;padding:47px 16px 82px;color:#a16b84;line-height:1.8}.closing .big-heart{font-size:2.2rem;display:block;animation:heartbeat 1.8s ease-in-out infinite}.closing strong{color:#a94d77}
+.floating-heart{position:fixed;z-index:30;bottom:-35px;pointer-events:none;opacity:0;animation:float-up var(--duration,4s) ease-in forwards;filter:drop-shadow(0 4px 4px #bc467821)}
+.toast{position:fixed;left:50%;bottom:82px;transform:translate(-50%,15px);opacity:0;pointer-events:none;z-index:31;border:1px solid #ffffffe6;background:#ffffffe6;color:#9b4e72;padding:12px 18px;border-radius:999px;box-shadow:0 12px 35px #823e5c26;font-weight:750;transition:.3s;text-align:center;max-width:calc(100% - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes float-up{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.95}100%{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.15)}30%{transform:scale(1)}45%{transform:scale(1.1)}}
+@media(max-width:720px){.hero{margin-top:38px}.wish-grid{grid-template-columns:1fr}.wish-card{display:grid;grid-template-columns:48px 1fr;column-gap:14px;align-items:start}.wish-icon{grid-row:span 2}.wish-card h3{margin:2px 0 6px}.topbar{width:calc(100% - 24px)}.pill{font-size:.72rem;padding:8px 10px}.brand{font-size:.79rem}.letter-card{border-radius:23px}.music-toggle{right:12px;bottom:12px;padding:12px 14px;font-size:.9rem}.section-title{margin-top:48px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="brand">♡ NHÀ MÌNH LÀ NHẤT</div><div class="pill">Một món quà nhỏ · Thương yêu thật nhiều</div></header>
+<main>
+<section class="hero"><div class="eyebrow">Ngày Phụ nữ Việt Nam</div><h1>Gửi những người phụ nữ <em>tuyệt vời nhất</em> nhà mình</h1><p class="hero-copy">Một chút hoa, một chút nhạc, thật nhiều yêu thương — dành tặng những người luôn khiến gia đình trở thành nơi ấm áp nhất để trở về.</p><div class="date-seal"><span>🌷</span> 20 · 10 · 2026 <span>💗</span></div></section>
+<div class="main-wrap">
+<article class="letter-card"><div class="mini-label">Một lá thư từ trái tim</div><h2>Gửi bà, mẹ, chị, em và những người phụ nữ thân yêu 💌</h2>
+<div class="letter-text">
+<p>Nhân ngày 20/10, con/cháu/em muốn gửi đến những người phụ nữ tuyệt vời của gia đình mình lời chúc chân thành nhất.</p>
+<p>Cảm ơn bà vì những yêu thương bình dị, cảm ơn mẹ vì đã luôn tần tảo và bao dung, cảm ơn chị/em vì đã mang đến tiếng cười và những điều dễ thương cho mái nhà này. Có thể đôi khi con/cháu/em chưa nói ra, nhưng <strong>mọi sự hy sinh, quan tâm và yêu thương của mọi người đều luôn được trân trọng.</strong></p>
+<p>Chúc mọi người luôn mạnh khỏe, bình an, vui vẻ và tự tin theo đuổi những điều mình mong muốn. Mong những ngày sắp tới sẽ dịu dàng hơn, có thật nhiều tiếng cười, những bữa cơm sum vầy và những khoảnh khắc khiến cả nhà thấy hạnh phúc vì có nhau.</p>
+<p>Và mong rằng không chỉ hôm nay, mà mỗi ngày mọi người đều cảm nhận được mình được yêu thương, được lắng nghe và xứng đáng với những điều tốt đẹp nhất. 🌸</p>
+</div><div class="signature">Thương cả nhà mình thật nhiều!</div><div class="flower-row" aria-hidden="true">🌷 🌸 💗 🌼 🌷</div></article>
+<section aria-labelledby="wishes-heading"><div class="section-title"><div class="mini-label">Những lời chúc nhỏ xinh</div><h2 id="wishes-heading">Gửi riêng từng yêu thương</h2><p>Mỗi người một nét đẹp, cùng góp nên sự ấm áp của gia đình.</p></div>
+<div class="wish-grid">
+<article class="wish-card"><div class="wish-icon" aria-hidden="true">🌹</div><h3>Dành tặng bà và mẹ</h3><p>Chúc bà và mẹ luôn khỏe mạnh, an yên, ngủ ngon mỗi tối và thức dậy với nụ cười. Mong mọi vất vả được đổi bằng thật nhiều niềm vui và sự chăm sóc từ cả nhà.</p></article>
+<article class="wish-card"><div class="wish-icon" aria-hidden="true">🌻</div><h3>Dành tặng chị và em</h3><p>Chúc chị/em luôn tự tin, rực rỡ theo cách riêng, gặp được người tốt và có đủ can đảm để theo đuổi ước mơ. Đừng quên rằng gia đình luôn là hậu phương của mình nhé!</p></article>
+<article class="wish-card"><div class="wish-icon" aria-hidden="true">🏡</div><h3>Dành cho cả nhà</h3><p>Mong nhà mình luôn mạnh khỏe, đồng lòng và bình yên. Khi vui thì cùng cười, khi mệt thì cùng nghỉ, lúc khó khăn thì nắm tay nhau — không ai phải cố gắng một mình.</p></article>
+</div></section>
+<section class="cheer" aria-labelledby="cheer-heading"><div class="mini-label" style="color:#ffe0eb">Một lời nhắn để cùng cố gắng</div><h2 id="cheer-heading">Nhà mình cùng cố lên nhé! ✨</h2><p>Dù ngoài kia có bận rộn hay đôi khi không như ý, chỉ cần cả nhà còn quan tâm, động viên và ở bên nhau, chúng ta vẫn luôn có thêm sức mạnh để bước tiếp.</p>
+<div class="quote" id="quote" aria-live="polite">“Chậm một chút cũng không sao — miễn là chúng ta không ngừng hy vọng và luôn có nhau.”</div><div class="action-row"><button class="btn btn-light" id="hugBtn" type="button">Ôm cả nhà một cái 💗</button><button class="btn btn-ghost" id="quoteBtn" type="button">Gửi một lời động viên ✨</button></div></section>
+</div></main>
+<footer class="closing"><span class="big-heart" aria-hidden="true">💗</span><div><strong>Chúc mừng ngày 20/10!</strong></div><div>Chúc những người phụ nữ nhà mình luôn được yêu thương — hôm nay và tất cả những ngày sau.</div><div style="margin-top:10px;font-size:.82rem">Được làm bằng sự biết ơn và tình yêu dành cho gia đình 🌷</div></footer>
+<button class="music-toggle" id="musicBtn" type="button" aria-pressed="false" title="Bật hoặc tắt giai điệu">♫ Bật nhạc dịu dàng</button><div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const heartSymbols=["💗","💕","💖","♡","🌸","✨","💞"];
+function floatHearts(amount=12){for(let i=0;i<amount;i++){const h=document.createElement("span");h.className="floating-heart";h.textContent=heartSymbols[Math.floor(Math.random()*heartSymbols.length)];h.style.left=(4+Math.random()*92)+"vw";h.style.fontSize=(16+Math.random()*20)+"px";h.style.setProperty("--duration",(3.4+Math.random()*2.6)+"s");h.style.animationDelay=(Math.random()*.75)+"s";document.body.appendChild(h);h.addEventListener("animationend",()=>h.remove(),{once:true})}}
+window.addEventListener("load",()=>setTimeout(()=>floatHearts(9),450));
+const toast=document.getElementById("toast");let toastTimer;
+function showToast(message){toast.textContent=message;toast.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove("show"),2600)}
+document.getElementById("hugBtn").addEventListener("click",()=>{floatHearts(34);showToast("Gửi cả nhà một cái ôm thật chặt! 💗")});
+const quotes=["“Chậm một chút cũng không sao — miễn là chúng ta không ngừng hy vọng và luôn có nhau.”","“Mỗi ngày cố thêm một chút, mỗi người thương nhau thêm một chút — thế là nhà mình đã tuyệt vời hơn rồi.”","“Không cần ai phải hoàn hảo. Chỉ cần cả nhà biết lắng nghe, sẻ chia và cùng nhau tiến bộ.”","“Ngày khó khăn rồi cũng qua. Hãy nghỉ ngơi khi mệt, bắt đầu lại khi sẵn sàng và nhớ rằng nhà mình luôn ở đây.”","“Niềm vui sẽ lớn hơn khi được sẻ chia, còn gánh nặng sẽ nhẹ hơn khi cả nhà cùng đỡ.”","“Mong cả nhà luôn có sức khỏe để cố gắng, có bình yên để tận hưởng và có nhau để trở về.”"];
+let quoteIndex=0;
+document.getElementById("quoteBtn").addEventListener("click",()=>{quoteIndex=(quoteIndex+1)%quotes.length;const q=document.getElementById("quote");q.animate([{opacity:.15,transform:"translateY(7px)"},{opacity:1,transform:"translateY(0)"}],{duration:420,easing:"ease-out"});q.textContent=quotes[quoteIndex];floatHearts(8)});
+// Giai điệu không lời tự tạo bằng Web Audio API — không cần tải nhạc ngoài.
+const musicBtn=document.getElementById("musicBtn");let audioContext=null,musicTimer=null,isPlaying=false,noteIndex=0,nextNoteTime=0;const tempo=420;
+const melody=[[523.25,659.25,783.99,659.25],[587.33,698.46,880,698.46],[523.25,659.25,783.99,1046.5],[783.99,698.46,659.25,587.33],[523.25,587.33,659.25,783.99],[698.46,659.25,587.33,523.25],[587.33,659.25,698.46,880],[783.99,659.25,523.25,523.25]].flat();
+const chords=[[261.63,329.63,392],[293.66,349.23,440],[261.63,329.63,392],[196,246.94,392]];
+function playTone(freq,when,duration,type="sine",volume=.055){const osc=audioContext.createOscillator(),gain=audioContext.createGain();osc.type=type;osc.frequency.setValueAtTime(freq,when);gain.gain.setValueAtTime(.0001,when);gain.gain.exponentialRampToValueAtTime(volume,when+.035);gain.gain.exponentialRampToValueAtTime(.0001,when+duration);osc.connect(gain);gain.connect(audioContext.destination);osc.start(when);osc.stop(when+duration+.03)}
+function scheduleMusic(){if(!isPlaying||!audioContext)return;while(nextNoteTime<audioContext.currentTime+.18){const beat=noteIndex%melody.length;playTone(melody[beat],nextNoteTime,.32,"sine",.045);if(beat%4===0){const chord=chords[Math.floor(beat/8)%chords.length];chord.forEach((freq,i)=>playTone(freq,nextNoteTime,.82,"triangle",.014-i*.002))}nextNoteTime+=tempo/1000;noteIndex++}}
+async function toggleMusic(){if(isPlaying){isPlaying=false;clearInterval(musicTimer);if(audioContext&&audioContext.state==="running")await audioContext.suspend();musicBtn.textContent="♫ Bật nhạc dịu dàng";musicBtn.setAttribute("aria-pressed","false");showToast("Đã tạm dừng giai điệu 🌷");return}try{const AudioCtx=window.AudioContext||window.webkitAudioContext;if(!AudioCtx)throw new Error("Trình duyệt chưa hỗ trợ phát giai điệu.");if(!audioContext)audioContext=new AudioCtx();await audioContext.resume();isPlaying=true;nextNoteTime=audioContext.currentTime+.06;scheduleMusic();musicTimer=setInterval(scheduleMusic,100);musicBtn.textContent="♫ Đang phát · Tắt nhạc";musicBtn.setAttribute("aria-pressed","true");showToast("Một giai điệu nhỏ dành cho gia đình mình 💗")}catch(error){showToast(error.message||"Chưa phát được nhạc trên trình duyệt này.")}}
+musicBtn.addEventListener("click",toggleMusic);
+</script></body></html>
